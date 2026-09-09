@@ -64,7 +64,6 @@ h2 { margin: 0; font-size: 20px; font-weight: 400; letter-spacing: -.025em; }
 .action-bubble:hover { transform: scale(1.06); }
 .action-bubble svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 .logo-white { font-size: 11px; font-weight: 600; }
-.brand-action img { position: absolute; width: 25px; height: 25px; object-fit: contain; opacity: 0; transition: opacity .2s; }
 .swipe-row:has(.storytime) { --brand-color: #c33877; }
 .swipe-row:has(.globaluy) { --brand-color: #1479b8; }
 .swipe-row:has(.bombe) { --brand-color: #e52335; }
