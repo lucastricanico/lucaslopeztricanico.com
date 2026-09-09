@@ -40,7 +40,7 @@ button { font: inherit; cursor: pointer; }
 .tab-indicator { position: absolute; inset: 0 auto 0 0; width: 25%; background: rgba(35,82,159,.48); border: 1px solid rgba(255,255,255,.08); border-radius: 999px; transition: transform .42s var(--ease); }
 .nav-tab { position: relative; display: grid; place-items: center; border-radius: 999px; font-size: 16px; transition: color .2s; }
 .nav-tab.active { color: white; }
-main { width: var(--page); margin: 0 auto; padding-bottom: 75px; }
+main { width: var(--page); margin: 0 auto; }
 .intro { padding-top: 37px; }
 .hero-copy { margin-bottom: 27px; }
 h1 { margin: 0; font-size: clamp(25px,4.7vw,34px); line-height: 1.2; letter-spacing: -.035em; font-weight: 400; color: #fff; }
@@ -91,12 +91,13 @@ h2 { margin: 0; font-size: 20px; font-weight: 400; letter-spacing: -.025em; }
 .expandable-item[data-expanded="true"] .expanded-copy p { padding-top: 14px; }
 .action-plus svg { transition: transform .3s; }
 .expandable-item[data-expanded="true"] .action-plus svg { transform: rotate(45deg); }
+.contact-section { padding-bottom: calc(50dvh - 133px); }
 .contact-grid { display: block; }
 .contact-list { display: grid; gap: 15px; max-width: 450px; }
 .contact-pill { display: flex; align-items: center; gap: 16px; min-height: 48px; border-radius: 999px; padding: 4px; }
 .contact-pill span { background: rgba(50,77,139,.5); color: white; display: grid; place-items: center; border-radius: 999px; flex: 0 0 105px; height: 38px; font-size: 15px; }
 .contact-pill strong { padding-right: 12px; font-size: 14px; font-weight: 400; color: #193b4d; overflow-wrap: anywhere; }
-@media(max-width:540px) {
+@media (max-width:540px) {
   :root { --page: calc(100% - 32px); }
   .site-header { margin-top: 22px; top: 12px; }
   .nav-tab { font-size: 14px; }
@@ -110,7 +111,7 @@ h2 { margin: 0; font-size: 20px; font-weight: 400; letter-spacing: -.025em; }
   .card-main { margin-top: 10px; }
   .card-date { font-size: 12px; }
 }
-@media(prefers-reduced-motion:reduce) {
+@media (prefers-reduced-motion:reduce) {
   html { scroll-behavior: auto; }
   *,*::before,*::after { transition-duration: .01ms!important; }
 }
