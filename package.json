@@ -6,9 +6,6 @@
     "build": "node scripts/build.mjs"
   },
   "dependencies": {
-    "@dpawlikowski/liquid-glass": "0.3.0",
-    "@ybouane/liquidglass": "1.0.3",
-    "liquid-gl": "2.1.0",
-    "simple-liquid-glass": "5.1.1"
+    "liquid-gl": "2.1.0"
   }
 }
