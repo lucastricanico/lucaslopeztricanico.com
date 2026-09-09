@@ -36,8 +36,6 @@ button { font: inherit; cursor: pointer; }
 .glass { background: var(--glass); border: 1px solid var(--edge); box-shadow: inset 0 1px 0 rgba(255,255,255,.12); backdrop-filter: blur(18px) saturate(115%); -webkit-backdrop-filter: blur(18px) saturate(115%); }
 .site-header { position: sticky; top: 20px; z-index: 20; width: var(--page); margin: 38px auto 0; }
 .tab-bar { padding: 5px; height: 54px; border-radius: 999px; display: flex; align-items: center; transition: background .3s; }
-.avatar { width: 40px; height: 40px; flex: 0 0 40px; border-radius: 50%; display: grid; place-items: center; font-size: 12px; color: white; background: rgba(255,255,255,.13); border: 1px solid var(--edge); }
-.nav-divider { width: 1px; height: 31px; background: var(--edge); margin: 0 14px 0 10px; }
 .tab-track { flex: 1; height: 100%; display: grid; grid-template-columns: repeat(4,1fr); position: relative; }
 .tab-indicator { position: absolute; inset: 0 auto 0 0; width: 25%; background: rgba(35,82,159,.48); border: 1px solid rgba(255,255,255,.08); border-radius: 999px; transition: transform .42s var(--ease); }
 .nav-tab { position: relative; display: grid; place-items: center; border-radius: 999px; font-size: 16px; transition: color .2s; }
@@ -101,7 +99,6 @@ h2 { margin: 0; font-size: 20px; font-weight: 400; letter-spacing: -.025em; }
 @media(max-width:540px) {
   :root { --page: calc(100% - 32px); }
   .site-header { margin-top: 22px; top: 12px; }
-  .nav-divider { margin-inline: 7px; }
   .nav-tab { font-size: 14px; }
   .intro { padding-top: 29px; }
   .swipe-row { min-height: 112px; --tray: 96px; }
