@@ -1,3 +1,24 @@
+@font-face {
+  font-family: "SF Pro Rounded";
+  src: local("SF Pro Rounded Regular"), local("SFProRounded-Regular");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF Pro Rounded";
+  src: local("SF Pro Rounded Medium"), local("SFProRounded-Medium");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF Pro Rounded";
+  src: local("SF Pro Rounded Semibold"), local("SFProRounded-Semibold");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
 :root {
   color-scheme: light;
   --page: min(620px, calc(100% - 40px));
@@ -8,7 +29,7 @@
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 110px; }
-body { margin: 0; min-height: 100vh; color: var(--ink); background: linear-gradient(180deg,#258fd0 0%,#71b3d6 48%,#bed3db 100%); font: 16px/1.45 -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0; min-height: 100vh; color: var(--ink); background: linear-gradient(180deg,#258fd0 0%,#71b3d6 48%,#bed3db 100%); font: 16px/1.45 "SF Pro Rounded",ui-rounded,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif; -webkit-font-smoothing: antialiased; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; cursor: pointer; }
 .sky { display: none; }
@@ -34,7 +55,8 @@ h2 { margin: 0; font-size: 20px; font-weight: 400; letter-spacing: -.025em; }
 .no-actions { --tray: 0px; }
 .swipe-card { position: relative; z-index: 2; width: calc(100% - var(--reveal)); min-height: 108px; border-radius: 27px; padding: 16px 19px; transition: width .42s var(--ease); }
 .card-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
-.card-title { color: #fff; font-size: 16px; }
+.card-title { color: #fff; font-size: 16px; transition: color .2s; }
+#work .card-title:hover { color: var(--brand-color, #087bf0); }
 .card-date { color: #18394c; font-size: 13px; white-space: nowrap; }
 .card-main { margin: 14px 0 0; font-size: 14px; color: #173b51; line-height: 1.45; }
 .row-actions { position: absolute; inset: 0 0 0 auto; display: flex; gap: 9px; align-items: center; opacity: 0; transform: translateX(-12px) scale(.9); pointer-events: none; transition: opacity .22s, transform .42s var(--ease); }
@@ -43,14 +65,22 @@ h2 { margin: 0; font-size: 20px; font-weight: 400; letter-spacing: -.025em; }
 .action-bubble svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 .logo-white { font-size: 11px; font-weight: 600; }
 .brand-action img { position: absolute; width: 25px; height: 25px; object-fit: contain; opacity: 0; transition: opacity .2s; }
-.brand-action:hover .logo-white, .brand-action:focus-visible .logo-white { opacity: 0; }
-.brand-action:hover img, .brand-action:focus-visible img { opacity: 1; }
-.brand-action:hover, .brand-action:focus-visible { background: rgba(255,255,255,.75); }
-.brand-mark { width: 32px; height: 32px; filter: brightness(0) invert(1); transition: filter .2s; }
-.storytime:hover .brand-mark, .storytime:focus-visible .brand-mark { filter: none; }
+.swipe-row:has(.storytime) { --brand-color: #c33877; }
+.swipe-row:has(.globaluy) { --brand-color: #1479b8; }
+.swipe-row:has(.bombe) { --brand-color: #e52335; }
+.nyu { --brand-color: #57068c; }
+.shpe { --brand-color: #173b70; }
+.github { --brand-color: #24292f; }
+.app-store { --brand-color: #087bf0; }
+.brand-action:hover, .brand-action:focus-visible,
+.storytime:hover, .storytime:focus-visible,
+.app-store:hover, .app-store:focus-visible {
+  background: color-mix(in srgb, var(--brand-color) 82%, transparent);
+  backdrop-filter: blur(18px) saturate(115%);
+  -webkit-backdrop-filter: blur(18px) saturate(115%);
+}
+.brand-mark { width: 32px; height: 32px; filter: brightness(0) invert(1); }
 .github img.brand-mark { position: static; opacity: 1; width: 23px; height: 23px; }
-.github:hover .brand-mark, .github:focus-visible .brand-mark { filter: brightness(0); }
-.app-store:hover { background: #087bf0; }
 .swipe-row:focus-within, .swipe-row.revealed { --reveal: var(--tray); }
 .swipe-row:focus-within .row-actions, .swipe-row.revealed .row-actions { opacity: 1; transform: none; pointer-events: auto; }
 @media (hover:hover) {
