@@ -116,8 +116,8 @@ h2 { margin: 0; font-size: 20px; font-weight: 400; letter-spacing: -.025em; }
 .contact-grid { display: block; }
 .contact-list { display: grid; gap: 15px; max-width: 450px; }
 .contact-pill { display: flex; align-items: center; gap: 16px; min-height: 48px; border-radius: 999px; padding: 4px; }
-.contact-pill span { background: rgba(50,77,139,.5); color: white; display: grid; place-items: center; border-radius: 999px; flex: 0 0 105px; height: 38px; font-size: 15px; }
-.contact-pill strong { padding-right: 12px; font-size: 14px; font-weight: 400; color: #193b4d; overflow-wrap: anywhere; }
+.contact-pill span { background: rgba(50,77,139,.5); color: white; display: grid; place-items: center; border-radius: 999px; flex: 0 0 105px; height: 38px; font-size: 14px; }
+.contact-pill strong { padding-right: 12px; font-size: 15px; font-weight: 400; color: #193b4d; overflow-wrap: anywhere; }
 @media (max-width:540px) {
   :root { --page: calc(100% - 32px); }
   .site-header { margin-top: 22px; top: 12px; }
