@@ -3,104 +3,160 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#f5f5f7" />
-    <meta name="description" content="Lucas — designer and developer creating calm, useful digital experiences." />
-    <title>Lucas — Designer & Developer</title>
+    <meta name="theme-color" content="#58b8ef" />
+    <meta name="description" content="Lucas Lopez Tricanico — iOS software engineer building thoughtful, polished mobile experiences." />
+    <title>Lucas Lopez — iOS Engineer</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="ambient ambient-one" aria-hidden="true"></div>
-    <div class="ambient ambient-two" aria-hidden="true"></div>
+    <svg class="filter-defs" aria-hidden="true">
+      <filter id="liquid-distortion" x="-20%" y="-20%" width="140%" height="140%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="2" seed="7" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" xChannelSelector="R" yChannelSelector="B" />
+      </filter>
+    </svg>
+
+    <div class="sky" aria-hidden="true">
+      <span class="sky-glow glow-a"></span><span class="sky-glow glow-b"></span><span class="sky-grain"></span>
+    </div>
 
     <header class="site-header">
-      <nav class="glass-nav" aria-label="Primary navigation">
-        <a class="monogram" href="#top" aria-label="Lucas, home">L</a>
-        <div class="nav-links">
-          <a href="#work">Work</a>
-          <a href="#about">About</a>
+      <nav class="tab-bar glass" aria-label="Portfolio sections">
+        <span class="glass-sheen" aria-hidden="true"></span>
+        <a class="avatar" href="#intro" aria-label="Lucas Lopez, introduction">LL</a>
+        <span class="nav-divider" aria-hidden="true"></span>
+        <div class="tab-track">
+          <span class="tab-indicator" aria-hidden="true"></span>
+          <a class="nav-tab active" href="#intro" data-section="intro"><span>intro</span></a>
+          <a class="nav-tab" href="#work" data-section="work"><span>work</span></a>
+          <a class="nav-tab" href="#projects" data-section="projects"><span>projects</span></a>
+          <a class="nav-tab" href="#contact" data-section="contact"><span>contact</span></a>
         </div>
-        <a class="nav-cta" href="mailto:hello@example.com">Let’s talk <span aria-hidden="true">↗</span></a>
       </nav>
     </header>
 
-    <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
-        <p class="eyebrow reveal">Independent designer & developer</p>
-        <h1 id="hero-title" class="reveal">I make digital things<br />feel <span class="soft-word">simple.</span></h1>
-        <div class="hero-footer reveal">
-          <p>Thoughtful products, clear identities, and interfaces that get out of the way.</p>
-          <a class="circle-link" href="#work" aria-label="See selected work">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6" /></svg>
-          </a>
-        </div>
-      </section>
-
-      <section class="work" id="work" aria-labelledby="work-title">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Selected work</p>
-          <h2 id="work-title">A few things<br />I’m proud of.</h2>
+    <main>
+      <section class="intro section" id="intro" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="kicker">iOS software engineer · New York</p>
+          <h1 id="page-title">lucas lopez<br /><span>tricanico</span></h1>
+          <p class="intro-line">I build native iOS experiences with a feel for motion, clarity, and the details people notice.</p>
         </div>
 
-        <div class="project-list">
-          <article class="project project-dark reveal" tabindex="0">
-            <div class="project-meta"><span>01</span><span>Product design · 2026</span></div>
-            <div class="project-art art-orbit" aria-hidden="true">
-              <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orb"></div>
+        <div class="section-rule"><span>introduction</span><span>01</span></div>
+        <div class="stack">
+          <article class="expandable-item" data-expanded="false">
+            <div class="swipe-row two-actions">
+              <div class="row-actions" aria-label="Education actions">
+                <button class="action-bubble action-plus" type="button" aria-expanded="false" aria-label="Show education details"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg></button>
+                <a class="action-bubble brand-action nyu" href="https://www.nyu.edu/" target="_blank" rel="noreferrer" aria-label="Visit New York University"><span class="logo-white">NYU</span><img src="https://www.google.com/s2/favicons?domain=nyu.edu&amp;sz=128" alt="" /></a>
+              </div>
+              <div class="swipe-card glass" tabindex="0">
+                <span class="glass-sheen" aria-hidden="true"></span>
+                <div class="card-top"><span class="card-title">education</span><span class="card-date">may 2027</span></div>
+                <p class="card-main">computer science at nyu tandon</p>
+                <p class="card-sub">previously fordham university · 3.93 GPA</p>
+              </div>
             </div>
-            <div class="project-copy">
-              <div><p>Digital product</p><h3>Orbit</h3></div>
-              <span class="project-arrow" aria-hidden="true">↗</span>
-            </div>
+            <div class="expanded-copy"><p>B.S. in Computer Science, expected May 2027. Dean’s List at Fordham University. CodePath iOS101 and iOS102 certified.</p></div>
           </article>
 
-          <article class="project project-light reveal" tabindex="0">
-            <div class="project-meta"><span>02</span><span>Identity · 2025</span></div>
-            <div class="project-art art-form" aria-hidden="true">
-              <span class="form-letter">A</span><span class="form-disc"></span>
+          <article class="expandable-item" data-expanded="false">
+            <div class="swipe-row two-actions">
+              <div class="row-actions" aria-label="Leadership actions">
+                <button class="action-bubble action-plus" type="button" aria-expanded="false" aria-label="Show leadership details"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg></button>
+                <a class="action-bubble brand-action shpe" href="https://shpe.org/" target="_blank" rel="noreferrer" aria-label="Visit SHPE"><span class="logo-white">S</span><img src="https://www.google.com/s2/favicons?domain=shpe.org&amp;sz=128" alt="" /></a>
+              </div>
+              <div class="swipe-card glass" tabindex="0">
+                <span class="glass-sheen" aria-hidden="true"></span>
+                <div class="card-top"><span class="card-title">leadership & activities</span><span class="card-date">2025—now</span></div>
+                <p class="card-main">professional development chair</p>
+                <p class="card-sub">society of hispanic professional engineers</p>
+              </div>
             </div>
-            <div class="project-copy">
-              <div><p>Brand system</p><h3>Form</h3></div>
-              <span class="project-arrow" aria-hidden="true">↗</span>
-            </div>
-          </article>
-
-          <article class="project project-blue reveal" tabindex="0">
-            <div class="project-meta"><span>03</span><span>Experience · 2025</span></div>
-            <div class="project-art art-tide" aria-hidden="true">
-              <div class="wave wave-one"></div><div class="wave wave-two"></div><div class="wave wave-three"></div>
-            </div>
-            <div class="project-copy">
-              <div><p>Interactive experience</p><h3>Tide</h3></div>
-              <span class="project-arrow" aria-hidden="true">↗</span>
-            </div>
+            <div class="expanded-copy"><p>I organize events that prepare SHPE members for internships, job opportunities, and career growth in STEM.</p></div>
           </article>
         </div>
       </section>
 
-      <section class="about" id="about" aria-labelledby="about-title">
-        <p class="eyebrow reveal">A little about me</p>
-        <h2 id="about-title" class="reveal">I care about the small details<br />that make a big difference.</h2>
-        <div class="about-grid reveal">
-          <p>I work where design and technology meet—turning complex ideas into experiences that feel natural, useful, and distinctly human.</p>
-          <div class="capabilities">
-            <span>Product design</span><span>Creative direction</span><span>Development</span>
+      <section class="section" id="work" aria-labelledby="work-heading">
+        <div class="section-rule"><h2 id="work-heading">work</h2><span>02</span></div>
+        <div class="stack">
+          <article class="swipe-row two-actions">
+            <div class="row-actions" aria-label="What's The Move links">
+              <a class="action-bubble brand-action wtm" href="https://whatsthemove.live/" target="_blank" rel="noreferrer" aria-label="Visit What's The Move"><span class="logo-white">W</span><img src="https://www.google.com/s2/favicons?domain=whatsthemove.live&amp;sz=128" alt="" /></a>
+              <a class="action-bubble app-store" href="https://apps.apple.com/us/app/whats-the-move-wtm/id6760272642" target="_blank" rel="noreferrer" aria-label="View What's The Move on the App Store"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8.1 17.5-1.8 3M15.9 17.5l1.8 3M9.7 15 15 5.8M8.5 8.2 15.7 20M5.3 15h13.4" /></svg></a>
+            </div>
+            <div class="swipe-card glass" tabindex="0">
+              <span class="glass-sheen" aria-hidden="true"></span>
+              <div class="card-top"><span class="card-title">what’s the move</span><span class="card-date">jan 2026—now</span></div>
+              <p class="card-main">iOS software engineer intern</p>
+              <p class="card-sub">SwiftUI · Supabase · Mapbox · push notifications</p>
+            </div>
+          </article>
+
+          <article class="swipe-row two-actions">
+            <div class="row-actions" aria-label="GlobalUY links">
+              <a class="action-bubble brand-action globaluy" href="https://www.globaluy.com/" target="_blank" rel="noreferrer" aria-label="Visit GlobalUY"><span class="logo-white">GU</span><img src="https://www.google.com/s2/favicons?domain=globaluy.com&amp;sz=128" alt="" /></a>
+              <a class="action-bubble arrow-action" href="https://www.globaluy.com/" target="_blank" rel="noreferrer" aria-label="Open GlobalUY website"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg></a>
+            </div>
+            <div class="swipe-card glass" tabindex="0">
+              <span class="glass-sheen" aria-hidden="true"></span>
+              <div class="card-top"><span class="card-title">global uy</span><span class="card-date">may—aug 2024</span></div>
+              <p class="card-main">software engineer intern</p>
+              <p class="card-sub">JavaScript · frontend systems · agile delivery</p>
+            </div>
+          </article>
+
+          <article class="swipe-row two-actions">
+            <div class="row-actions" aria-label="Extintores Bombe links">
+              <a class="action-bubble brand-action bombe" href="https://bombe.com.uy/" target="_blank" rel="noreferrer" aria-label="Visit Extintores Bombe"><span class="logo-white">B</span><img src="https://www.google.com/s2/favicons?domain=bombe.com.uy&amp;sz=128" alt="" /></a>
+              <a class="action-bubble arrow-action" href="https://bombe.com.uy/" target="_blank" rel="noreferrer" aria-label="Open Extintores Bombe website"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg></a>
+            </div>
+            <div class="swipe-card glass" tabindex="0">
+              <span class="glass-sheen" aria-hidden="true"></span>
+              <div class="card-top"><span class="card-title">extintores bombe</span><span class="card-date">mar—jun 2023</span></div>
+              <p class="card-main">web developer intern</p>
+              <p class="card-sub">HTML · CSS · responsive design · performance</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="projects" aria-labelledby="projects-heading">
+        <div class="section-rule"><h2 id="projects-heading">projects</h2><span>03</span></div>
+        <div class="stack">
+          <article class="swipe-row one-action">
+            <div class="row-actions" aria-label="Wordish links"><a class="action-bubble brand-action github" href="https://github.com/lucastricanico/wordish-ios-app" target="_blank" rel="noreferrer" aria-label="View Wordish on GitHub"><span class="logo-white">GH</span><img src="https://www.google.com/s2/favicons?domain=github.com&amp;sz=128" alt="" /></a></div>
+            <div class="swipe-card glass" tabindex="0"><span class="glass-sheen" aria-hidden="true"></span><div class="card-top"><span class="card-title">wordish</span><span class="card-date">2025</span></div><p class="card-main">a word game with exacting logic</p><p class="card-sub">SwiftUI · async/await · MVVM · Swift Testing</p></div>
+          </article>
+
+          <article class="swipe-row one-action">
+            <div class="row-actions" aria-label="Circura links"><a class="action-bubble brand-action github" href="https://github.com/lucastricanico/circura-ios-app" target="_blank" rel="noreferrer" aria-label="View Circura on GitHub"><span class="logo-white">GH</span><img src="https://www.google.com/s2/favicons?domain=github.com&amp;sz=128" alt="" /></a></div>
+            <div class="swipe-card glass" tabindex="0"><span class="glass-sheen" aria-hidden="true"></span><div class="card-top"><span class="card-title">circura</span><span class="card-date">2025</span></div><p class="card-main">focus, drawn as a circle</p><p class="card-sub">UIKit · Core Animation · MVVM · local notifications</p></div>
+          </article>
+
+          <article class="swipe-row one-action">
+            <div class="row-actions" aria-label="Memory Game links"><a class="action-bubble brand-action github" href="https://github.com/lucastricanico/memorygame-ios-app" target="_blank" rel="noreferrer" aria-label="View Memory Game on GitHub"><span class="logo-white">GH</span><img src="https://www.google.com/s2/favicons?domain=github.com&amp;sz=128" alt="" /></a></div>
+            <div class="swipe-card glass" tabindex="0"><span class="glass-sheen" aria-hidden="true"></span><div class="card-top"><span class="card-title">memory game</span><span class="card-date">2025</span></div><p class="card-main">new york, one match at a time</p><p class="card-sub">SwiftUI · 3D animation · async images · XCTest</p></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact" aria-labelledby="contact-heading">
+        <div class="section-rule"><h2 id="contact-heading">contact</h2><span>04</span></div>
+        <div class="contact-grid">
+          <div class="contact-list">
+            <a class="contact-pill glass" href="mailto:ll5352@nyu.edu"><span>email</span><strong>ll5352@nyu.edu</strong></a>
+            <a class="contact-pill glass" href="https://github.com/lucastricanico" target="_blank" rel="noreferrer"><span>github</span><strong>@lucastricanico</strong></a>
+            <a class="contact-pill glass" href="https://linkedin.com/in/lucaslopezz" target="_blank" rel="noreferrer"><span>linkedin</span><strong>/in/lucaslopezz</strong></a>
           </div>
+          <a class="contact-orb glass" href="mailto:ll5352@nyu.edu" aria-label="Email Lucas"><span class="glass-sheen" aria-hidden="true"></span><span>say hello</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg></a>
         </div>
-      </section>
-
-      <section class="contact reveal" aria-labelledby="contact-title">
-        <div class="contact-glow" aria-hidden="true"></div>
-        <p class="eyebrow">Have something in mind?</p>
-        <h2 id="contact-title">Let’s make it real.</h2>
-        <a class="contact-link" href="mailto:hello@example.com">hello@example.com <span aria-hidden="true">↗</span></a>
       </section>
     </main>
 
-    <footer>
-      <p>© <span id="year">2026</span> Lucas</p>
-      <p>Designed with intention.</p>
-      <a href="#top">Back to top ↑</a>
-    </footer>
+    <footer><span>lucas lopez tricanico</span><span>© <span id="year">2026</span></span></footer>
   </body>
 </html>
