@@ -15,8 +15,19 @@ function updateSection() {
   if(window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 8) index = sections.length - 1;
   setActive(index);
 }
-window.addEventListener('scroll', updateSection, {passive:true});
-tabs.forEach((tab,i) => tab.addEventListener('click', () => setActive(i)));
+let settleTimer;
+let scrollLocked = false;
+window.addEventListener('scroll', () => {
+  clearTimeout(settleTimer);
+  settleTimer = setTimeout(() => { scrollLocked = false; }, 150);
+  if (!scrollLocked) updateSection();
+}, {passive:true});
+tabs.forEach((tab,i) => tab.addEventListener('click', () => {
+  // Ignore the intermediate sections the smooth-scroll animation passes
+  // through on its way to the clicked one, until scrolling settles.
+  scrollLocked = true;
+  setActive(i);
+}));
 updateSection();
 document.querySelectorAll('.swipe-row:not(.no-actions)').forEach(row => {
   const card = row.querySelector('.swipe-card');
