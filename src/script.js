@@ -54,14 +54,3 @@ document.addEventListener('click',event => {
     if(!row.contains(event.target)) { row.classList.remove('revealed'); row.querySelector('.swipe-card').setAttribute('aria-expanded','false'); }
   });
 });
-document.querySelectorAll('.action-plus').forEach((button,i) => {
-  const item = button.closest('.expandable-item');
-  const content = item.querySelector('.expanded-copy');
-  content.id = 'details-' + i;
-  button.setAttribute('aria-controls',content.id);
-  button.addEventListener('click',() => {
-    const expanded = item.dataset.expanded !== 'true';
-    item.dataset.expanded = String(expanded);
-    button.setAttribute('aria-expanded',String(expanded));
-  });
-});

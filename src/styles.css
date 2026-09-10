@@ -106,12 +106,6 @@ h2 { margin: 0; font-size: 20px; font-weight: 400; letter-spacing: -.025em; }
   .swipe-row:hover .row-actions { opacity: 1; transform: none; pointer-events: auto; }
 }
 :focus-visible { outline: 2px solid #153c68; outline-offset: 4px; }
-.expanded-copy { display: grid; grid-template-rows: 0fr; visibility: hidden; transition: grid-template-rows .3s var(--ease),visibility .3s; }
-.expanded-copy p { min-height: 0; overflow: hidden; margin: 0; padding: 0 19px; font-size: 14px; color: #16384b; }
-.expandable-item[data-expanded="true"] .expanded-copy { grid-template-rows: 1fr; visibility: visible; }
-.expandable-item[data-expanded="true"] .expanded-copy p { padding-top: 14px; }
-.action-plus svg { transition: transform .3s; }
-.expandable-item[data-expanded="true"] .action-plus svg { transform: rotate(45deg); }
 .contact-section { padding-bottom: calc(50dvh - 133px); }
 .contact-grid { display: block; }
 .contact-list { display: grid; gap: 15px; max-width: 450px; }
